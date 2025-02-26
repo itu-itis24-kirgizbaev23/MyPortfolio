@@ -1,0 +1,603 @@
+.space-grotesk-unique {
+    font-family: "Space Grotesk", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+html{
+    padding: 0;
+    margin: 0;
+    height: 500vh;
+    overflow-x: hidden;
+}
+
+body{
+    background-color: black;
+    font-family: 'Space Grotesk', sans-serif;
+    padding: 0 2vw;
+    width: 100vw;
+    margin: 0; 
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+}  
+
+canvas {
+    display: block;
+    position: fixed;
+    width: 100vw; 
+    height: 100vh;
+    top: 0; 
+    left: 0;
+    z-index: 0;
+    opacity: 0;
+    animation: fadeIn 3s forwards;
+    animation-delay: 3s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+h1{
+    color: white;
+    font-size: 80px;
+    font-weight: bold;
+    white-space: nowrap; 
+    overflow: hidden; 
+}  
+
+h2{
+    color: white;
+    font-size: 56px;
+    white-space: nowrap; 
+    overflow: hidden; 
+}
+
+h3{
+    color: white;
+    font-size: 48px;
+}
+
+h4{
+    color: white;
+    font-size: 32px;
+}
+
+h5{
+    color: white;
+    font-size: 20px;
+    text-align: center;
+}
+
+
+a{
+    color: white;
+    font-size: 24px;
+}
+
+/* HEADER */
+
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    background-color: #182e6b;
+    padding: 20px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 20;
+}
+
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style: none;
+    margin: 0 10vw;
+    animation: fadeIn 2s forwards;
+    opacity: 0;
+    animation-delay: 2s;
+}
+
+header a{
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+    margin-right: 18vw;
+}
+
+.introduction{
+    display: flex;
+    justify-content: left;
+    z-index: 15;
+}
+
+#information{
+    width: 54vw;
+}
+
+.introduction h2:first-child {
+    margin-top: 20vh;
+}
+
+#photo{
+    margin: 5vh 2vw;
+    transform: translateX(30%);
+    animation: slideIn 2s ease-out forwards;
+}
+
+@keyframes slideIn {
+    from {
+      transform: translateX(30%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+
+
+header h1{
+    animation: blink 1s step-end infinite, 
+    type 2s forwards 2s steps(20); 
+    width: 0; 
+}
+
+header h2{
+    width: 0;
+}
+
+header h4{
+    width: 0;
+}
+
+#message1{
+    animation: blink 1s step-end infinite, 
+    type 2s forwards 0.5s steps(10); 
+}
+
+#message2{
+    animation: blink 1s step-end infinite, 
+    type 1.5s forwards 4s steps(10); 
+}
+
+#message3{
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+    animation-delay: 5.5s;
+}
+
+header h5{
+    text-align: center;
+}
+
+#arrow:hover{
+    cursor: pointer;
+}
+
+
+#arrow {
+    transform: translateX(-50%);
+    animation: bounce 2s 10;
+    color: white;
+    width: 48px;
+    height: 48px;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
+}
+
+
+main{
+    padding-top: 72px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* SKILLS */
+
+#skills{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    padding: 40px;
+    z-index: 15;
+    width: 95vw;
+}
+
+#skills h2{
+    text-align: center;
+    animation: none;
+    grid-column: span 6;
+}
+
+#skills h4{
+    text-align:left;
+    animation: none;
+    grid-column: span 6;
+    margin-left: 40px;
+}
+
+#skills .icons{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#skills .icons img{
+    width: 64px;
+}
+
+#icons1{
+    animation: fly1 8s infinite;
+}
+
+#icons2{
+    animation: fly2 8s infinite;
+}
+
+#icons3{
+    animation: fly3 8s infinite;
+}
+
+#icons4{
+    animation: fly4 8s infinite;
+}
+
+#icons5{
+    animation: fly5 8s infinite;
+}
+
+/*PROJECT*/
+
+#projects{
+    display: flex;
+    flex-direction: row;
+    width: 90vw;
+    margin-left: 2vw important;
+    z-index: 15;
+}
+
+#projects h1{
+    text-align: center;
+    margin: 0 auto;
+}
+
+#projects h4{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.about-project{
+    justify-content: left;
+    width: 40vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stack{
+    display: flex;
+    justify-content: center;
+}
+
+.stack img{
+    width: 36px;
+    height: 36px;
+    margin-right: 18px;
+}
+
+.gallery{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 20px;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.gallery img{
+    width: 360px;
+    height: auto;
+    box-shadow: #636363 0px 0px 10px;
+}
+
+.gallery img:hover{
+    cursor: zoom-in;
+}
+
+.project-link {
+    padding: 12px 20px;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    position: relative;
+    background: linear-gradient(90deg, #5bfcc4, #f593e4, #71a4f0);
+    border-radius: 12px;
+    color: #fff;
+    transition: all 0.3s ease;
+    box-shadow:
+      inset 0px 0px 5px #ffffffa9,
+      inset 0px 35px 30px #000,
+      0px 5px 10px #000000cc;
+    text-shadow: 1px 1px 1px #000;
+  }
+  .project-link::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    border-radius: 12px;
+    filter: blur(0);
+    z-index: -1;
+    box-shadow: none;
+    background: conic-gradient(
+      #00000000 80deg,
+      #40baf7,
+      #f34ad7,
+      #5bfcc4,
+      #00000000 280deg
+    );
+    transition: all 0.3s ease;
+  }
+  .project-link:hover::before {
+    filter: blur(15px);
+  }
+  .project-link:active::before {
+    filter: blur(5px);
+    transform: translateY(1px);
+  }
+  .project-link:active {
+    box-shadow:
+      inset 0px 0px 5px #ffffffa9,
+      inset 0px 35px 30px #000;
+    margin-top: 3px;
+  }
+
+
+.carousel{
+    justify-content: flex-end;
+    margin-left: auto;
+    margin-right: 20px;
+}
+
+.carousel img{
+    width: 440px;
+    height: auto;
+    margin: 10px 0;
+}
+
+.next-project{
+    transform: scale(0.8);
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.current-project{
+    transform: scale(1.2);
+    padding-right: 60px;
+    cursor: pointer;
+}
+
+.current-project img{
+    box-shadow: #006093 0px 0px 40px;
+}
+
+.current-project img:hover{
+    transform: scale(1.1);
+    box-shadow: #00c700 0px 0px 20px;
+}
+
+.next-project img:hover{
+    transform: scale(1.1);
+    box-shadow: #00c700 0px 0px 20px;
+}
+
+.next-project:hover{
+    opacity: 1;
+}
+
+
+@keyframes rotation_481 {
+    0% {
+      transform: rotateZ(0deg);
+    }
+  
+    0% {
+      transform: rotateZ(360deg);
+    }
+  }
+  
+
+  .hint-container {
+    position: relative;
+    bottom: -15vh;
+    left: 35%;
+    transform: translateX(-50%);
+    pointer-events: none;
+    z-index: 40;
+}
+
+.click-hint {
+    width: 50px;
+    opacity: 0.9;
+    animation: clickAnimation 1.5s infinite ease-in-out;
+}
+
+@keyframes clickAnimation {
+    0% { transform: scale(1) translateY(0); }
+    50% { transform: scale(0.9) translateY(5px); } /* Имитируем нажатие */
+    100% { transform: scale(1) translateY(0); }
+}
+
+
+
+
+
+/*FOOTER*/
+  
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 72px;
+    margin: 0;
+    z-index: 15;
+}
+
+footer h1, footer h5, footer a {
+    z-index: 15;
+}
+  
+
+/* Общий контейнер карточки */
+.card {
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.055);
+    vertical-align: top;
+    display: flex;
+    margin-top: 32px;
+    padding: 32px;
+    gap: 32px;
+    justify-content: center;
+    align-items: center;
+    z-index: 30;
+}
+
+
+/* Стили для всех контейнеров соцсетей */
+.socialContainer {
+    width: 80px;
+    height: 88px;
+    background-color: rgb(44, 44, 44);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition-duration: 1.2s;
+    border-radius: 15px 0 15px 0;
+}
+  
+/* При наведении для Instagram */
+.containerOne:hover {
+    background-color: #f90101;
+}
+  
+/* При наведении для Twitter */
+.containerTwo:hover {
+    background-color: black;
+}
+  
+/* При наведении для LinkedIn */
+.containerThree:hover {
+    background-color: #006093;
+}
+  
+/* При наведении для WhatsApp */
+.containerFour:hover {
+    background-color: #26b3ff;
+}
+  
+.containerFive:hover {
+    background-color: #00c700;
+}
+
+/* Эффект при нажатии */
+.socialContainer:active {
+    transform: scale(0.9);
+    transition-duration: 1.2s;
+}
+  
+/* Стили для SVG */
+.socialSvg {
+    width: 64px;
+}
+  
+.socialSvg path {
+    fill: rgb(255, 255, 255);
+}
+  
+/* Анимация при наведении */
+.socialContainer:hover .socialSvg {
+    animation: slide-in-top 1.2s both;
+}
+  
+  @keyframes slide-in-top {
+    0% {
+      transform: translateY(-50px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  
+
+@keyframes blink{
+    50%{border-color: transparent;}
+}
+
+@keyframes type{
+    to{width: 100%;}
+}
+
+@keyframes fly1 {
+    0% { transform: translate(0, 0); }
+    25% { transform: translate(3px, -3px); }
+    50% { transform: translate(6px, 0); }
+    75% { transform: translate(3px, 3px); }
+    100% { transform: translate(0, 0); }
+}
+
+@keyframes fly2 {
+    0% { transform: translate(0, 0); }
+    25% { transform: translate(-3px, 3px); }
+    50% { transform: translate(-6px, 0); }
+    75% { transform: translate(-3px, -3px); }
+    100% { transform: translate(0, 0); }
+}
+
+@keyframes fly3 {
+    0% { transform: translate(0, 0); }
+    25% { transform: translate(2px, -2px); }
+    50% { transform: translate(4px, 0); }
+    75% { transform: translate(2px, 2px); }
+    100% { transform: translate(0, 0); }
+}
+
+@keyframes fly4 {
+    0% { transform: translate(0, 0); }
+    25% { transform: translate(-2px, 2px); }
+    50% { transform: translate(-4px, 0); }
+    75% { transform: translate(-2px, -2px); }
+    100% { transform: translate(0, 0); }
+}
+
+@keyframes fly5 {
+    0% { transform: translate(0, 0); }
+    25% { transform: translate(1px, -1px); }
+    50% { transform: translate(2px, 0); }
+    75% { transform: translate(1px, 1px); }
+    100% { transform: translate(0, 0); }
+}

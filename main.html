@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <script defer src="scripts.js"></script>
+</head>
+<body>
+     <canvas id="canvas"></canvas> 
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <section class="introduction">
+            <span id="information">
+                <h2 id="message1">Hello! My name is</h2>
+                <h1>SANZHAR KIRGIZBAEV</h1>
+                <h2 id="message2">I am a frontend developer</h2>
+                <a id="message3">View Resume</a>
+            </span>
+            <img id="photo" src="./assets/me.png"></img>
+        </section>
+        <img src="./assets/arrow.svg" id="arrow" onclick="scrollDown()">
+        <h5>Scroll down</h5>
+    </header>
+    <main>
+        <section id="skills">
+            <h2>My Skills</h2>
+            <h4>Programming languages</h4>
+            <div class="icons"><img src="./assets/stack/Java.svg" alt="java" id="icons1"><h5>Java</h5></div>
+            <div class="icons"><img src="./assets/stack/Javascript.svg" alt="javascript" id="icons1"><h5>Java Script</h5></div>
+            <div class="icons"><img src="./assets/stack/C++.svg" alt="c++" id="icons1"><h5>C++</h5></div>
+            <div class="icons"><img src="./assets/stack/PHP.svg" alt="php" id="icons1"><h5>PHP</h5></div>
+            <div class="icons"><img src="./assets/stack/Python.svg" alt="python" id="icons1"><h5>Python</h5></div>
+            <h4>Frameworks</h4>
+            <div class="icons"><img src="./assets/stack/Tailwind.svg" alt="tailwing" id="icons2"><h5>Tailwind CSS</h5></div>
+            <div class="icons"><img src="./assets/stack/React.svg" alt="react" id="icons2"><h5>React</h5></div>
+            <div class="icons"><img src="./assets/stack/Redux.svg" alt="redux" id="icons2"><h5>Redux</h5></div>
+            <div class="icons"><img src="./assets/stack/Docker.svg" alt="docker" id="icons2"><h5>Docker</h5></div>
+            <h4>Web Technologies</h4>
+            <div class="icons"><img src="./assets/stack/HTML.svg" alt="html" id="icons3"><h5>HTML</h5></div>
+            <div class="icons"><img src="./assets/stack/CSS.svg" alt="css" id="icons3"><h5>CSS</h5></div>
+            <div class="icons"><img src="./assets/stack/Boostrap.svg" alt="boostrap" id="icons3"><h5>Boostrap</h5></div>
+            <div class="icons"><img src="./assets/stack/Tilda.svg" alt="tilda" id="icons3"><h5>Tilda</h5></div>
+            <div class="icons"><img src="./assets/stack/Wordpress.svg" alt="wordpress" id="icons3"><h5>WordPress</h5></div>
+            <h4>Tools</h4>
+            <div class="icons"><img src="./assets/stack/GithubW.svg" alt="github" id="icons4"><h5>Github</h5></div>
+            <div class="icons"><img src="./assets/stack/Figma.svg" alt="figma" id="icons4"><h5>Figma</h5></div>
+            <div class="icons"><img src="./assets/stack/Photoshop.svg" alt="photoshop" id="icons4"><h5>Photoshop</h5></div>
+            <h4>Soft Skills</h4>
+            <div class="icons"><img src="./assets/stack/collab.svg" alt="collaboration" id="icons5"><h5>Collaboration</h5></div>
+            <div class="icons"><img src="./assets/stack/learn.svg" alt="learner" id="icons5"><h5>Constant Learner</h5></div>
+            <div class="icons"><img src="./assets/stack/goal.svg" alt="goal" id="icons5"><h5>Goal oriented</h5></div>
+            <div class="icons"><img src="./assets/stack/UI.svg" alt="UI/UX" id="icons5"><h5>Friendly Interface</h5></div>
+            <div class="icons"><img src="./assets/stack/Creative.svg" alt="goal" id="icons5"><h5>Creative design</h5></div>
+        </section>
+        <h2>My Projects</h2>
+        <section id="projects">
+            <article class="about-project" id="sneakercare"  style="display:flex">
+                <h4>Sneakercare.kz</h4>
+                <div class="project-info" id="projectInfo">
+                    <h5> Web application that allows users to browse the range of products, get detailed information about sizes
+                        and availability of each of them, build a shopping cart and place an order. The login and account creation feature has been implemented</h5>
+                    <h5>Technologies used: HTML, CSS, JavaScript, React, Redux, Boostrap</h5>
+                    <div class="stack">
+                        <img src="./assets/stack/HTML.svg" alt="html">
+                        <img src="./assets/stack/CSS.svg" alt="css">
+                        <img src="./assets/stack/Boostrap.svg" alt="boostrap">
+                        <img src="./assets/stack/Javascript.svg" alt="javascript">
+                        <img src="./assets/stack/React.svg" alt="react">
+                        <img src="./assets/stack/Redux.svg" alt="redux">
+                    </div>
+                    <div class="gallery">
+                        <img src="./assets/sneakercare/2.jpg" onclick="zoomIn(this)">
+                        <img src="./assets/sneakercare/3.jpg" onclick="zoomIn(this)">
+                        <img src="./assets/sneakercare/4.jpg" onclick="zoomIn(this)">
+                        <img src="./assets/sneakercare/5.jpg" onclick="zoomIn(this)">
+                    </div>
+                  </div>
+                  <button class="project-link">Open in GitHub</button>  
+            </article>
+
+            <article style="display:none" class="about-project" id="biamino">
+                <h4>Biamino club</h4>
+                <div class="project-info" id="projectInfo">
+                    <h5>Biamino is a platform that provides a convenient interface for tracking and managing investments while leveraging professional-grade financial tools.
+                        Participated in the development of frontend part</h5>
+                    </h5>
+                    <h5>Technologies used: Next.js, Typescript, Tailwind, React Query, Supabase</h5>
+                    <div class="stack">
+                        <img src="./assets/stack/nextjs.svg" alt="nextjs">
+                        <img src="./assets/stack/typescript.svg" alt="typescript">
+                        <img src="./assets/stack/Tailwind.svg" alt="tailwind">
+                        <img src="./assets/stack/reactquery.svg" alt="reactquery">
+                        <img src="./assets/stack/supabase.svg" alt="supabase">
+                    </div>
+                    <div class="gallery">
+                        <img src="./assets/biamino/1.png" onclick="zoomIn(this)">
+                        <img src="./assets/biamino/2.png" onclick="zoomIn(this)">
+                        <img src="./assets/biamino/3.png" onclick="zoomIn(this)">
+                        <img src="./assets/biamino/4.png" onclick="zoomIn(this)">
+                    </div>
+                  </div>
+                  <button class="project-link">Open in GitHub</button>  
+            </article>
+
+            <article style="display:none" class="about-project" id="game">
+                <h4>Term project</h4>
+                <div class="project-info" id="projectInfo">
+                    <h5> Implemented all the features of html, css, javascript to create a project in the form of an old arcade game.
+                         Using javascript created a game where the user guesses the word by letters</h5>
+                    </h5>
+                    <h5>Technologies used: HTML, CSS, JavaScript, Github</h5>
+                    <div class="stack">
+                        <img src="./assets/stack/HTML.svg" alt="HTML">
+                        <img src="./assets/stack/CSS.svg" alt="CSS">
+                        <img src="./assets/stack/Javascript.svg" alt="JavaScript">
+                        <img src="./assets/stack/GithubW.svg" alt="github">
+                    </div>
+                    <div class="gallery">
+                        <img src="./assets/termproject/1.png" onclick="zoomIn(this)">
+                        <img src="./assets/termproject/2.png" onclick="zoomIn(this)">
+                        <img src="./assets/termproject/3.png" onclick="zoomIn(this)">
+                        <img src="./assets/termproject/4.png" onclick="zoomIn(this)">
+                    </div>
+                  </div>
+                  <button class="project-link">Open in GitHub</button>  
+            </article>
+
+            <article style="display:none" class="about-project" id="gifty">
+                <h4>Gifty Mini App</h4>
+                <div class="project-info" id="projectInfo">
+                    <h5> Utilized telegram's new mini-apps feature. Participated in a contest organized by @CryptoBot to create a mini-app for sending gifts. Built the frontend part</h5>
+                    </h5>
+                    <h5>Technologies used: React, CSS, Telegram Api</h5>
+                    <div class="stack">
+                        <img src="./assets/stack/React.svg" alt="React">
+                        <img src="./assets/stack/CSS.svg" alt="CSS">
+                        <img src="./assets/Telegram.svg" alt="Telegram">
+                    </div>
+                    <div class="gallery">
+                        <img src="./assets/gifty/1.png" onclick="zoomIn(this)">
+                        <img src="./assets/gifty/2.png" onclick="zoomIn(this)">
+                        <img src="./assets/gifty/3.png" onclick="zoomIn(this)">
+                        <img src="./assets/gifty/4.png" onclick="zoomIn(this)">
+                    </div>
+                  </div>
+                  <button class="project-link">Open in GitHub</button>  
+            </article>
+
+            <article style="display:none" class="about-project" id="app">
+                <h4>Personal Appoinment System</h4>
+                <div class="project-info" id="projectInfo">
+                    <h5> Solved the problem of arranging for my students to sign up for personal appointments with me.
+                         Created an application where everyone can take an available slot on my calendar and book it for a personal session.</h5>
+                    </h5>
+                    <h5>Technologies used: PHP, HTML, CSS, GoogleApi</h5>
+                    <div class="stack">
+                        <img src="./assets/stack/PHP.svg" alt="PHP">
+                        <img src="./assets/stack/CSS.svg" alt="CSS">
+                        <img src="./assets/stack/HTML.svg" alt="html">
+                        <img src="./assets/Gmail.svg" alt="google">
+                    </div>
+                    <div class="gallery">
+                        <img src="./assets/phpapp/1.png" onclick="zoomIn(this)">
+                        <img src="./assets/phpapp/2.png" onclick="zoomIn(this)">
+                    </div>
+                  </div>
+                  <button class="project-link">Open in GitHub</button>  
+            </article>
+
+            <div class="hint-container">
+                <img src="./assets/finger.svg" alt="Click hint" class="click-hint">
+            </div>
+
+            <div class="carousel">
+                <div class="next-project" onclick=slide(this)><img src="./assets/biamino/1.png" alt="Biamino"></div>
+                <div class="current-project" onclick="slide(this)"><img src="./assets/sneakercare/1.jpg" alt="Sneakercare"></div>
+                <div class="next-project" onclick="slide(this)"><img src="./assets/phpapp/1.png" alt="PHP App"></div>
+            </div>  
+        </section>
+    </main>
+    <footer id="contact">
+        <h1>Contact me</h1>
+        <h5>Feel free to reach out</h5>
+        <a href="mailto: sanzhar.kirgizbaev@gmail.com" class="email">
+            sanzhar.kirgizbaev@gmail.com
+        </a>
+        <div class="card">
+            <a class="socialContainer containerOne" href="#"><img src="./assets/Gmail.svg" alt="gmail" class="socialSvg instagramSvg"></a>
+        
+            <a class="socialContainer containerTwo" href="#">
+              <!-- Twitter SVG -->
+                <img src="./assets/stack/GithubW.svg" alt="github" class="socialSvg twitterSvg">
+            </a>
+        
+            <a class="socialContainer containerThree" href="#">
+              <!-- LinkedIn SVG -->
+                <img src="./assets/Linkedin.svg" alt="linkedin" class="socialSvg linkdinSvg">
+            </a>
+        
+            <a class="socialContainer containerFour" href="#">
+              <!-- WhatsApp SVG -->
+              <img src="./assets/Telegram.svg" alt="telegram" class="socialSvg whatsappSvg">
+            </a>
+
+            <a class="socialContainer containerFive" href="#">
+                <!-- WhatsApp SVG -->
+                <img src="./assets/Whatsapp.svg" alt="Whatsapp" class="socialSvg whatsappSvg">
+              </a>
+          </div>     
+        <h5>@2025 Sanzhar Kirgizbaev</h5>
+    </footer>
+</body>
+</html>
