@@ -601,3 +601,105 @@ footer h1, footer h5, footer a {
     75% { transform: translate(1px, 1px); }
     100% { transform: translate(0, 0); }
 }
+
+
+
+@media screen and (min-width:1280) and (max-width: 1440px) {
+    h1{
+        font-size: 56px;
+    }
+    h2{
+        font-size: 48px;
+    }
+}
+
+/* Для экранов меньше 1280px */
+@media screen and (max-width: 1279px) {
+    /* Картинка профиля становится круглой, меньше и перемещается вниз */
+    #photo {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        transform: none;
+        margin: 20px auto;
+    }
+    /* Заголовки в header занимают всю ширину и выравниваются по центру */
+    header h1,
+    header h2,
+    header h4,
+    header h5 {
+        width: 100%;
+        text-align: center;
+    }
+    /* Сетка skills становится 3 колонки */
+    #skills {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    /* Проекты: слайдер становится горизонтальным, информация - под ним */
+    #projects {
+        flex-direction: column;
+    }
+    .carousel {
+        display: flex;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        margin: 0 auto;
+        width: 100%;
+    }
+    .about-project {
+        width: 100%;
+        margin-top: 20px;
+    }
+}
+
+/* Для планшетов (до 768px) */
+@media screen and (max-width: 768px) {
+    header h1 {
+        font-size: 40px;
+    }
+    header h2 {
+        font-size: 32px;
+    }
+    header h4 {
+        font-size: 24px;
+    }
+}
+
+/* Для небольших мобильных устройств (до 480px) */
+@media screen and (max-width: 480px) {
+    header h1 {
+        font-size: 32px;
+    }
+    header h2 {
+        font-size: 28px;
+    }
+    header h4 {
+        font-size: 20px;
+    }
+    /* Дополнительное уменьшение колонок в skills */
+    #skills {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Для очень маленьких устройств (до 300px) */
+@media screen and (max-width: 360px) {
+    header h1 {
+        font-size: 28px;
+    }
+    header h2 {
+        font-size: 24px;
+    }
+    header h4 {
+        font-size: 18px;
+    }
+    #photo {
+        width: 120px;
+        height: 120px;
+    }
+    /* При необходимости, можно упростить сетку skills до одной колонки */
+    #skills {
+        grid-template-columns: 1fr;
+    }
+}
+
